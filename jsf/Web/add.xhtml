@@ -18,7 +18,7 @@
 
 <center>
 <h:form>
-<rich:panel header="Dodawanie pacjenta" id="panel">
+<rich:panel header="Nowy wpis" id="panel">
 <br/>
 
 <p:messages id="msgs" />
@@ -72,7 +72,7 @@
         <p:inputText id="wzrost" value="#{Person.wzrost}" />          <h:outputLabel></h:outputLabel>
         
            
-        <p:commandButton value="Dodaj pacjenta" update="panel" actionListener="#{Person.check}" icon="ui-icon-check" />
+        <p:commandButton value="Zatwierdź" update="panel" actionListener="#{Person.check}" />
        	
         
 

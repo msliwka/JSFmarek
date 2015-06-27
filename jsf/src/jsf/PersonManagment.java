@@ -37,7 +37,7 @@ public class PersonManagment{
 	{
 		
 		
-		String data= p.getImie()+";"+p.getNazwisko()+";"+p.getPesel()+";"+p.getDataUrodzenia()+";"+p.getAdres()+";"+p.getTel()+";"+p.getWaga()+";"+p.getWzrost()+";;";
+		String data= p.getImie()+";"+p.getNazwisko()+";"+p.getPesel()+";"+ "null" +";"+p.getAdres()+";"+p.getTel()+";"+p.getWaga()+";"+p.getWzrost()+";;";
 		 
 
 			 
@@ -47,7 +47,7 @@ public class PersonManagment{
 				 w.write(data);
 				 w.close();
 			} catch (IOException e) {
-				// TODO AFuto-generated catch block
+		
 				e.printStackTrace();
 			}
 
@@ -87,10 +87,6 @@ public class PersonManagment{
 					p.setNazwisko(dataPerson[1]);
 					p.setPesel(dataPerson[2]);
 					p.setDataUrodzenia(dataPerson[3]);
-//					DateFormat df = new SimpleDateFormat("dd MM yy");
-//					Date date = df.parse(dataPerson[3]);		 
-//					p.setDataUrodzenia(date);
-
 					p.setAdres(dataPerson[4]);
 					p.setTel(Integer.parseInt(dataPerson[5]));
 					p.setWaga(Double.parseDouble(dataPerson[6]));

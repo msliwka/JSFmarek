@@ -1,18 +1,12 @@
 package jsf;
 
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.bean.ManagedBean;
-import javax.xml.crypto.Data;
-
-import org.primefaces.event.SelectEvent;
 
 
 
@@ -20,18 +14,7 @@ import org.primefaces.event.SelectEvent;
 @RequestScoped
 public class Person
 {
-//	public Person(String imie,String nazwisko,String pesel,Date dataUrodzenia,String adres,int tel,double waga,double wzrost)
-//	{
-//		this.imie=imie;
-//		this.nazwisko=nazwisko;
-//		this.pesel=pesel;
-//		this.dataUrodzenia=dataUrodzenia;
-//		this.adres=adres;
-//		this.tel=tel;
-//		this.waga=waga;
-//		this.wzrost=wzrost;
-//	
-//	}
+
 	
 	private int id;
 
@@ -105,15 +88,9 @@ public class Person
 	
 		if(checkPerson.sprawdz(pesel)) 
 		{
-//			 if(checkPerson.sprawdzDate(dataUrodzenia, pesel))
-//				{
+
 			this.save();
-//				}
-//			else
-//			{
-				
-//				FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Z≥a data, bπdü niezgodna z nr PESEL"));
-//		    }
+
 						
 		}
 		else
@@ -124,8 +101,7 @@ public class Person
 		}
 	public void save() {
 		PersonManagment.add(this);
-	//	PersonManagment.add(new Person(this.imie,this.nazwisko,this.pesel,this.dataUrodzenia,this.adres,this.tel,this.waga,this.wzrost));
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Pacjent " + imie + " " + nazwisko +" zosta≥ pomyúlnie dodany do bazy."));
+ FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(imie + " " + nazwisko +" zosta≥ dodany."));
     }
 	
 
