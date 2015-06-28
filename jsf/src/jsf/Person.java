@@ -1,12 +1,11 @@
 package jsf;
 
 
-
-
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.bean.ManagedBean;
+
 
 
 
@@ -95,13 +94,13 @@ public class Person
 		}
 		else
 		{
-						FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("B³êdny nr PESEL"));
+						FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("BÂ³Ãªdny nr PESEL"));
 		}
 		
 		}
 	public void save() {
 		PersonManagment.add(this);
- FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(imie + " " + nazwisko +" zosta³ dodany."));
+ FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(imie + " " + nazwisko +" zostaÂ³ dodany."));
     }
 	
 
