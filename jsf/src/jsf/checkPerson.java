@@ -2,10 +2,6 @@ package jsf;
 
 
 
-
-
-
-
 public class checkPerson {
  
  public static boolean sprawdz(String pesel){
